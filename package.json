@@ -1,0 +1,28 @@
+{
+    "name": "talk-tskaigi-2026",
+    "type": "module",
+    "private": true,
+    "scripts": {
+        "build": "slidev build --base /talk-tskaigi-2026/ --with-clicks",
+        "dev": "slidev --open",
+        "export": "slidev export --with-clicks"
+    },
+    "dependencies": {
+        "@fontsource/nunito-sans": "^5.2.6",
+        "@fontsource/source-code-pro": "^5.2.6",
+        "@slidev/cli": "^52.15.1",
+        "@slidev/theme-default": "^0.25.0",
+        "hack-font": "^3.3.0",
+        "slidev-addon-fancy-arrow": "^0.13.1",
+        "slidev-addon-qrcode": "^1.0.2",
+        "vue": "^3.5.33"
+    },
+    "packageManager": "pnpm@11.1.2+sha512.415a1cc25974731e75455c1468371be74c5aa5fb7621b50d4056d222451609f11412f23fd602e6169f1e060466641f798597e1be961a10688836a67b16569499",
+    "devDependencies": {
+        "@slidev/theme-seriph": "^0.25.0",
+        "@slidev/types": "^52.15.1",
+        "playwright-chromium": "^1.55.0",
+        "slidev-theme-prismatic": "^0.0.2",
+        "typescript": "~5.8.3"
+    }
+}

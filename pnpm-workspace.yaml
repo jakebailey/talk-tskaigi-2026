@@ -1,0 +1,12 @@
+allowBuilds:
+  playwright-chromium: true
+
+onlyBuiltDependencies:
+  - esbuild
+  - playwright-chromium
+
+patchedDependencies:
+  '@shikijs/themes': patches/@shikijs__themes.patch
+
+overrides:
+  typescript: ~5.8.3

@@ -1,0 +1,89 @@
+/* Bolder headings, borrowed from prismatic. */
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3,
+.slidev-layout h4,
+.slidev-layout h5,
+.slidev-layout h6,
+.slidev-layout.section h1,
+.slidev-layout.section h2,
+.slidev-layout.section h3,
+.slidev-layout.section h4,
+.slidev-layout.section h5,
+.slidev-layout.section h6 {
+    font-weight: 700;
+}
+
+/* v-click reveal: fade up, borrowed from prismatic. */
+.slidev-vclick-target {
+    transition: all 0.5s ease;
+}
+.slidev-vclick-hidden {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+/* Zoom in the active list item, dim previous ones, borrowed from prismatic. */
+li.slidev-vclick-target.slidev-vclick-current {
+    transform: scale(1.1);
+    transform-origin: left center;
+}
+li.slidev-vclick-prior {
+    opacity: 0.7;
+}
+
+:root {
+    --slidev-code-font-size: 13px;
+    --slidev-code-line-height: 21px;
+    /* --prism-font-size: 14px;
+    --prism-line-height: 22px; */
+    --slidev-tab-size: 4;
+    --prism-tab-size: 4;
+}
+.twoslash-hover {
+    padding-bottom: 0px !important;
+    border-bottom: 0px !important;
+}
+
+/* Eliminate hairline seams between QR code dots (qr-code-styling renders
+   each module as a separate rect; subpixel anti-aliasing leaves gaps). */
+#talk-qrcode svg {
+    shape-rendering: crispEdges;
+}
+
+/* Safe zone for captions; comment out before publishing */
+/* #slideshow::after {
+    content: "";
+    position: fixed;
+    top: 80%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    border-top: 2px dashed red;
+    z-index: 9999;
+} */
+
+img {
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+.dark img {
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.03);
+}
+
+.col-left {
+    margin-right: 2.5%;
+}
+.col-right {
+    margin-left: 2.5%;
+}
+
+.grid.grid-cols-2.w-full.h-full.auto-rows-fr:has(> .slidev-layout.default:first-child
+    + .w-full.h-full[style*="background-image"]) {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+}
+
+.slidev-note {
+    font-size: 1.5rem !important;
+    color: var(--slidev-secondary) !important;
+}
